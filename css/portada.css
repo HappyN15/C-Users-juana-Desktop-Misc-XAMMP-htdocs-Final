@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'MedievalSharp';
+    src: url(/fonts/MedievalSharp-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Jaro';
+    src: url(/fonts/Jaro-Regular-VariableFont_opsz.ttf);
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url(/fonts/JosefinSans-Regular.ttf);
+}
+
+*{margin: 0;padding: 0;}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #952b11;
+    text-align: center;
+    
+}
+a{
+    font-family: 'MedievalSharp';
+    text-decoration: none;
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 35px;
+    
+}
+a:hover{
+    background-color: #fff;
+    color: #952b11;
+}
+
+body{background-color: #dccebc;}
+.contenido{
+    width: 50vh;
+    margin: auto;
+    margin-top: 5vh;
+    background-color: #faebd7;
+    border: 2px solid #951111;
+    box-shadow: 4px 4px #951111;
+   
+    grid-template-rows: 2fr 1fr;
+    text-align: center;
+    min-width: 300px;
+}
+.contenido h1{
+    color: #951111;
+    font-family: "MedievalSharp";
+}
+.contenido h2{
+    color: #951111;
+    font-family: 'Jaro';
+}
+.contenido h3{
+    color: #951111;
+    font-family: 'JosefinSans';
+}
+.foto{
+    text-align: center;
+    width: 80%;
+}
+.scalp{
+    text-align: center;
+}
+@media screen and (max-width:600px) {
+    a{
+        font-size: 30px;
+
+    }
+}

@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'MedievalSharp';
+    src: url(/fonts/MedievalSharp-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Jaro';
+    src: url(/fonts/Jaro-Regular-VariableFont_opsz.ttf);
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url(/fonts/JosefinSans-Regular.ttf);
+}
+
+*{margin: 0; padding: 0;}
+header{
+    width: 100%;
+    background-color: #951111; 
+    text-align: center;
+    color: #fff;
+    font-family: 'MedievalSharp';
+    font-size: 35px;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #952b11;
+    text-align: center;
+    
+}
+a{
+    font-family: 'Jaro';
+    text-decoration: none;
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 35px;
+    
+}
+a:hover{
+    background-color: #fff;
+    color: #952b11;
+}
+.container-all{
+    text-align: center;
+    background-color: #faebd7;
+}
+
+h2{
+    color: #951111;
+    font-size: 50px;
+    font-family: 'MedievalSharp';
+}
+p{
+    color: #955311;
+    font-size: 25px;
+    font-family: 'JosefinSans';
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #951111;
+    text-align: center;
+}
+
+@media screen and (max-width:1500px) {
+    img{
+        width: 100%;
+    }
+    header{
+        font-size: 23px;
+    }
+    a{
+        font-size: 28px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+}
+@media screen and (max-width:1200px) {
+    img{
+        width: 100%;
+    }
+    header{
+        font-size: 23px;
+    }
+    a{
+        font-size: 28px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+} 
+@media screen and (max-width:900px) {
+    img{
+        width: 100%;
+    }
+    header{
+        font-size: 23px;
+    }
+    a{
+        font-size: 28px;
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+}
+@media screen and (max-width:600px) {
+    img{
+        width: 100%;
+    }
+    header{
+        font-size: 23px;
+    }
+    a{
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+
+
+.carrusel{
+    margin: auto;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0,0,0);
+    transition: all 1200ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagina{
+    position: absolute;
+    bottom: 20px;left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; justify-content: center;
+    width: 100%;
+}
+
+.pagina-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(150, 73, 0);
+    width: 16px;height: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+    margin: 0 10px;
+    text-align: center;
+    transition: all 1200ms;
+}
+
+.pagina-item:hover img{
+    transform: scale(2);
+}
+
+.pagina-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.pagina-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~.slide{
+    animation: none;
+    transform: translate3d(0,0,0);
+}
+
+input[id="1"]:checked ~ .pagina .pagina-item[for="1"]{
+    background: #fff;
+}
+
+input[id="2"]:checked ~.slide{
+    animation: none;
+    transform: translate3d(calc(-100% *1 ),0,0);
+}
+
+input[id="2"]:checked ~ .pagina .pagina-item[for="2"]{
+    background: #fff;
+}
+
+input[id="3"]:checked ~.slide{
+    animation: none;
+    transform: translate3d(calc(-100% *2 ),0,0);
+}
+
+input[id="3"]:checked ~ .pagina .pagina-item[for="3"]{
+    background: #fff;
+}
+
+input[id="4"]:checked ~.slide{
+    animation: none;
+    transform: translate3d(calc(-100% *3 ),0,0);
+}
+
+input[id="4"]:checked ~ .pagina .pagina-item[for="4"]{
+    background: #fff;
+}
+
+input[id="5"]:checked ~.slide{
+    animation: none;
+    transform: translate3d(calc(-100% *4 ),0,0);
+}
+
+input[id="5"]:checked ~ .pagina .pagina-item[for="5"]{
+    background: #fff;
+}
+
+@keyframes autoplay{
+    20%{transform: translate3d(calc(-100% *0),0,0);}
+    40%{transform: translate3d(calc(-100% *1),0,0);}
+    60%{transform: translate3d(calc(-100% *2),0,0);}
+    80%{transform: translate3d(calc(-100% *3),0,0);}
+    100%{transform: translate3d(calc(-100% *4),0,0);}
+}

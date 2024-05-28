@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Formulario.css">
+    <title>perfil</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Portada.html">Sobre el autor</a>
+    </nav>
+    <h2>Contactanos</h2>
+    <form class="clientes" action="guardar.php" method="post" id="contact_form" runat="server" enctype="multipart/form-data">
+        
+        <label for="Nombre">Nombre:</label><br>
+        <input type="text" id="Nombre" name="Nombre" maxlength="30"required> <br>
+
+        <label for="Apellidos">Apellidos:</label><br>
+        <input type="text" id="Apellidos" name="Apellidos" maxlength="60"required> <br>
+
+        <label for="Calle">Calle:</label><br>
+        <input type="text" id="Calle" name="Calle" maxlength="60"required> <br>
+
+        <h3>Que opina de la pagina?</h3>
+        <label for="rating">
+            <select name="rating" id="">
+                <option value="Excelente">Excelente</option>
+                <option value="Buena">Buena</option>
+                <option value="Mediocre">Mediocre</option>
+                <option value="Mala">Mala</option>
+                <option value="Pesima">Pesima</option>
+
+            </select><br><br>
+            <button class="submit" type="submit">Enviar</button>
+        </label>
+    </form>
+</body>
+</html>
